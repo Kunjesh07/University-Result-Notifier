@@ -13,20 +13,20 @@ chrome_options.add_argument("--no-sandbox")
 
 
 while(1):
-	driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
+	browser = webdriver.Chrome(execution_path=CHROMEDRIVER_PATH, chrome_options=chrome_options)
 	#driver = webdriver.Chrome("D:\\Python\\Drivers\\chromedriver_win32\\chromedriver.exe")
-	driver.get("https://charusat.edu.in:912/Uniexamresult")
+	browser.get("https://charusat.edu.in:912/Uniexamresult")
 
-	inst = Select(driver.find_element_by_xpath('/html/body/form/div[3]/table[2]/tbody/tr[1]/td[2]/select'))
+	inst = Select(browser.find_element_by_xpath('/html/body/form/div[3]/table[2]/tbody/tr[1]/td[2]/select'))
 	inst.select_by_value('21')
 
-	degr = Select(driver.find_element_by_xpath("/html/body/form/div[3]/table[2]/tbody/tr[2]/td[2]/select"))
+	degr = Select(browser.find_element_by_xpath("/html/body/form/div[3]/table[2]/tbody/tr[2]/td[2]/select"))
 	degr.select_by_value('132')
 
-	sem = Select(driver.find_element_by_xpath("/html/body/form/div[3]/table[2]/tbody/tr[3]/td[2]/select"))
+	sem = Select(browser.find_element_by_xpath("/html/body/form/div[3]/table[2]/tbody/tr[3]/td[2]/select"))
 	sem.select_by_value('4')
 
-	exam = Select(driver.find_element_by_xpath("/html/body/form/div[3]/table[2]/tbody/tr[4]/td[2]/select"))
+	exam = Select(browser.find_element_by_xpath("/html/body/form/div[3]/table[2]/tbody/tr[4]/td[2]/select"))
 	# exam.select_by_index('1')
 	print(len(exam.options))
 
