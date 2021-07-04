@@ -13,7 +13,7 @@ chrome_options.add_argument("--no-sandbox")
 
 
 while(1):
-	browser = webdriver.Chrome(execution_path=CHROMEDRIVER_PATH, chrome_options=chrome_options)
+	browser = webdriver.Chrome(execution_path=os.environ.get("CHROMEDRIVER_PATH"),chrome_options=chrome_options)
 	#driver = webdriver.Chrome("D:\\Python\\Drivers\\chromedriver_win32\\chromedriver.exe")
 	browser.get("https://charusat.edu.in:912/Uniexamresult")
 
