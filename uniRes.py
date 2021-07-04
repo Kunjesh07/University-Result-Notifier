@@ -30,7 +30,7 @@ while(1):
 		exam = Select(driver.find_element_by_xpath("/html/body/form/div[3]/table[2]/tbody/tr[4]/td[2]/select"))
 		# exam.select_by_index('1')
 
-		if len(exam.options)>4:
+		if len(exam.options)>5:
 			from pushbullet import Pushbullet
 			APIKEY = "o.5FYfsc1t4qnEnPVlrKQJq3kaqQJjtQWL"
 			pb = Pushbullet(APIKEY)
@@ -40,7 +40,7 @@ while(1):
 	except:
 		print(f"Last Failed: {dt_object}")
 
-	time.sleep(6)
+	time.sleep(61)
 # enrollmentNo = driver.find_element_by_xpath("/html/body/form/div[3]/table[2]/tbody/tr[5]/td[2]/input")
 # enrollmentNo.send_keys("D20DCE177")
 # enrollmentNo.send_keys(Keys.RETURN)
