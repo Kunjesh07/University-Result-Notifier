@@ -28,10 +28,10 @@ while(1):
 	# exam.select_by_index('1')
 	print(len(exam.options))
 
-	if len(exam.options)>4:
+	if len(exam.options)>5:
 		from pushbullet import Pushbullet
 		APIKEY = "o.5FYfsc1t4qnEnPVlrKQJq3kaqQJjtQWL"
 		pb = Pushbullet(APIKEY)
 		push = pb.push_note(f"Results Available!", "")
 
-	time.sleep(60)
+	time.sleep(120)
