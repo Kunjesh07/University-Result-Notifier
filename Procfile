@@ -1,1 +1,1 @@
-web: python uniRes.py
+web: python WatchMen.py
