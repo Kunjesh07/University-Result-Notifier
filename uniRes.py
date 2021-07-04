@@ -34,4 +34,4 @@ while(1):
 		pb = Pushbullet(APIKEY)
 		push = pb.push_note(f"Results Available!", "")
 
-	time.sleep(120)
+	time.sleep(180)
