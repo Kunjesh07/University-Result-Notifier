@@ -40,7 +40,5 @@ while(1):
 	except:
 		print(f"Last Failed: {dt_object}")
 
-	time.sleep(20)
-# enrollmentNo = driver.find_element_by_xpath("/html/body/form/div[3]/table[2]/tbody/tr[5]/td[2]/input")
-# enrollmentNo.send_keys("D20DCE177")
-# enrollmentNo.send_keys(Keys.RETURN)
+	time.sleep(60)
+
