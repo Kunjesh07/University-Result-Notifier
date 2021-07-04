@@ -1,5 +1,4 @@
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
 import time
 import os
@@ -29,13 +28,10 @@ while(1):
 	# exam.select_by_index('1')
 	print(len(exam.options))
 
-	if len(exam.options)>5:
+	if len(exam.options)>4:
 		from pushbullet import Pushbullet
-		APIKEY = "o.aMx7YM8nKRXwoQqHlSJdDbEly0EoNlsD"
+		APIKEY = "o.5FYfsc1t4qnEnPVlrKQJq3kaqQJjtQWL"
 		pb = Pushbullet(APIKEY)
 		push = pb.push_note(f"Results Available!", "")
 
 	time.sleep(60)
-# enrollmentNo = driver.find_element_by_xpath("/html/body/form/div[3]/table[2]/tbody/tr[5]/td[2]/input")
-# enrollmentNo.send_keys("D20DCE177")
-# enrollmentNo.send_keys(Keys.RETURN)
