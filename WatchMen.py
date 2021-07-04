@@ -1,4 +1,4 @@
 import os, time
 while(1):
 	os.system("python uniRes.py")
-	time.sleep(6)
+	time.sleep(65)
