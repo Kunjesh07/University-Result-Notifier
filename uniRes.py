@@ -30,7 +30,7 @@ while(1):
 		exam = Select(driver.find_element_by_xpath("/html/body/form/div[3]/table[2]/tbody/tr[4]/td[2]/select"))
 		# exam.select_by_index('1')
 
-		if len(exam.options)>5:
+		if len(exam.options)>4:
 			from pushbullet import Pushbullet
 			APIKEY = "o.5FYfsc1t4qnEnPVlrKQJq3kaqQJjtQWL"
 			pb = Pushbullet(APIKEY)
