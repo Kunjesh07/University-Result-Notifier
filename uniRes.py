@@ -2,6 +2,8 @@ from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 import time
 import os
+from datetime import datetime
+
 
 chrome_options = webdriver.ChromeOptions()
 chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
@@ -11,6 +13,9 @@ chrome_options.add_argument("--no-sandbox")
 
 
 while(1):
+	timestamp = int(time.time())
+	dt_object = datetime.fromtimestamp(timestamp)
+
 	try:
 		driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
 		#driver = webdriver.Chrome("D:\\Python\\Drivers\\chromedriver_win32\\chromedriver.exe")
@@ -27,14 +32,18 @@ while(1):
 
 		exam = Select(driver.find_element_by_xpath("/html/body/form/div[3]/table[2]/tbody/tr[4]/td[2]/select"))
 		# exam.select_by_index('1')
-		print(len(exam.options))
 
 		if len(exam.options)>4:
 			from pushbullet import Pushbullet
 			APIKEY = "o.5FYfsc1t4qnEnPVlrKQJq3kaqQJjtQWL"
 			pb = Pushbullet(APIKEY)
 			push = pb.push_note(f"Results Available!", "")
+		print(f"Last Update: {dt_object}")
+
 	except:
-		pass
+		print(f"Last Failed: {dt_object}")
 
 	time.sleep(60)
+# enrollmentNo = driver.find_element_by_xpath("/html/body/form/div[3]/table[2]/tbody/tr[5]/td[2]/input")
+# enrollmentNo.send_keys("D20DCE177")
+# enrollmentNo.send_keys(Keys.RETURN)
