@@ -1,1 +1,1 @@
-web: python UniRes.py
+web: python uniRes.py
