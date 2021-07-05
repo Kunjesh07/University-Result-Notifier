@@ -1,1 +1,1 @@
-worker:gunicorn python WatchMen.py
+worker: python WatchMen.py
