@@ -1,2 +1,2 @@
-heroku ps:scale web=1
-worker: python WatchMen.py
+
+web:gunicorn python WatchMen.py
