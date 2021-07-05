@@ -1,1 +1,1 @@
-web: python WatchMen.py
+worker: python WatchMen.py
