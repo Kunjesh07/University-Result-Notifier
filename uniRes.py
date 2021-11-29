@@ -24,7 +24,7 @@ try:
 	degr.select_by_value('132')
 
 	sem = Select(driver.find_element_by_xpath("/html/body/form/div[3]/table[2]/tbody/tr[3]/td[2]/select"))
-	sem.select_by_value('4')
+	sem.select_by_value('5')
 
 	exam = Select(driver.find_element_by_xpath("/html/body/form/div[3]/table[2]/tbody/tr[4]/td[2]/select"))
 	# exam.select_by_index('1')
