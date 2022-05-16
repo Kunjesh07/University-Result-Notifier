@@ -24,12 +24,12 @@ try:
 	degr.select_by_value('132')
 
 	sem = Select(driver.find_element_by_xpath("/html/body/form/div[3]/table[2]/tbody/tr[3]/td[2]/select"))
-	sem.select_by_value('5')
+	sem.select_by_value('6')
 
 	exam = Select(driver.find_element_by_xpath("/html/body/form/div[3]/table[2]/tbody/tr[4]/td[2]/select"))
 	
 
-	if len(exam.options)>5:
+	if len(exam.options)>4:
 		from pushbullet import Pushbullet
 		APIKEY = "o.0I2hPFf3TvLXkUIA9BueqmXD7AXkDIs4"
 		pb = Pushbullet(APIKEY)
