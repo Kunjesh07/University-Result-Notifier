@@ -31,7 +31,7 @@ try:
 
 	if len(exam.options)>3:
 		from pushbullet import Pushbullet
-		APIKEY = "o.0I2hPFf3TvLXkUIA9BueqmXD7AXkDIs4"
+		APIKEY = "o.7wUgnRpILz5jam1qmJE6bA4hpR3eLRxW"
 		pb = Pushbullet(APIKEY)
 		push = pb.push_note(f"Results Available!", "")
 	print(f"Last Update: {dt_object}")
